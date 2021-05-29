@@ -68,4 +68,4 @@ composer require proklung/container-locator-bundle
 - `public static function parameter(string $param)` - Конкретный параметр Kernel.
 - `public static function twig()` - Twig.
 - `public static function session()` - Session.
-- `public static function logger()` - Session.
+- `public static function logger()` - Logger (сервис `public.logger`).
