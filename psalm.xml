@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="1"
+    resolveFromConfigFile="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+    allowStringToStandInForClass="true"
+    allowCoercionFromStringToClassConst="true"
+    findUnusedPsalmSuppress="true"
+    skipChecksOnUnresolvableIncludes="true"
+>
+    <plugins>
+        <pluginClass class="Psalm\SymfonyPsalmPlugin\Plugin"/>
+        <pluginClass class="Psalm\MockeryPlugin\Plugin"/>
+    </plugins>
+    <projectFiles>
+        <directory name="/"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+            <directory name="Tests"/>
+            <file name="ContainerLocatorBundle.php"/>
+        </ignoreFiles>
+    </projectFiles>
+
+    <issueHandlers>
+        <MixedAssignment>
+            <errorLevel type="suppress">
+                <directory name="/"/>
+            </errorLevel>
+        </MixedAssignment>
+        <MixedInferredReturnType>
+            <errorLevel type="suppress">
+                <directory name="/"/>
+            </errorLevel>
+        </MixedInferredReturnType>
+        <MixedMethodCall>
+            <errorLevel type="suppress">
+                <directory name="/"/>
+            </errorLevel>
+        </MixedMethodCall>
+        <MixedReturnStatement>
+            <errorLevel type="suppress">
+                <directory name="/"/>
+            </errorLevel>
+        </MixedReturnStatement>
+        <UnresolvableInclude>
+            <errorLevel type="suppress">
+                <directory name="/"/>
+            </errorLevel>
+        </UnresolvableInclude>
+    </issueHandlers>
+</psalm>

@@ -1,0 +1,10 @@
+services:
+  # конфигурация по умолчанию в *этом* файле
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  kernel:
+    class: Prokl\ContainerLocatorBundle\Tests\Fixtures\AppKernelTesting
+    arguments: ['dev', true]
