@@ -7,7 +7,6 @@ use ReflectionMethod;
 use RuntimeException;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpKernel\KernelInterface;
 use Twig\Environment;
 
 /**
@@ -101,7 +100,7 @@ final class ContainerHelper
      * Session.
      *
      * @return Session
-     * @throws RuntimeException Когда контейнер не инициализирован или не найден сервис twig.instance.
+     * @throws RuntimeException Когда контейнер не инициализирован или не найден сервис session.
      */
     public static function session() : Session
     {
@@ -112,7 +111,7 @@ final class ContainerHelper
      * Logger.
      *
      * @return object
-     * @throws RuntimeException Когда контейнер не инициализирован или не найден сервис twig.instance.
+     * @throws RuntimeException Когда контейнер не инициализирован или не найден сервис public_logger.
      */
     public static function logger()
     {

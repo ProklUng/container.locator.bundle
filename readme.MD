@@ -43,7 +43,7 @@ composer require proklung/container-locator-bundle
 В результате хэлпер `container` может выглядеть как-то так:
 
 ```php
-    function container($classContainer = ContainerLocatorBundle::class)
+    function container($classContainer = ContainerLocator::class)
     {
         $container = $classContainer::instance();
         if ($container === null) {
